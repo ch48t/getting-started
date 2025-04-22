@@ -46,3 +46,8 @@ jobs:
           name: getting-started
           location: 'North Europe'
           ports: '3000'
+      - name: 'Build and push image'
+        run: |
+          set -x
+          docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ secrets.REPOSITORY_NAME }}:${{ github.run_number }}
+          docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ secrets.REPOSITORY_NAME }}:${{ github.run_number }}
