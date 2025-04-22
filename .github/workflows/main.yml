@@ -44,5 +44,5 @@ jobs:
           registry-username: ${{ secrets.REGISTRY_USERNAME }}
           registry-password: ${{ secrets.REGISTRY_PASSWORD }}
           name: getting-started
-          location: 'West Europe'
+          location: 'North Europe'
           ports: '3000'
